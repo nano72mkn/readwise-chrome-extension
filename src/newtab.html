@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>New Tab</title>
+<meta charset="utf-8">
+
+<script src="../js/jquery/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css">
+<script src="newtab.js"></script>
+
+<style>
+	html {
+		background-color: #F1F5F8;
+					opacity:0;
+		transition: 300ms opacity;
+	}
+
+	.highlight-block {
+		background: white;
+		box-shadow: 0 2px 2px 0 rgba(34,41,47,0.05), 0 8px 8px 0 rgba(34,41,47,0.05);
+		border-radius: 2px;
+		padding: 5rem 7.5rem;
+		margin-top: 3rem;
+
+		z-index: 4;
+	}
+
+	@media(max-width: 1000px) and (min-width: 768px) {
+		.highlight-block {
+			background: white;
+			box-shadow: 0 2px 2px 0 rgba(34,41,47,0.05), 0 8px 8px 0 rgba(34,41,47,0.05);
+			border-radius: 2px;
+			padding: 2rem 3rem;
+		}
+	}
+
+	.highlight-title {
+		font-weight: 600;
+	}
+
+	.highlight-author {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.highlight-text {
+		margin-top: 1rem;
+		font-family: 'Noto Serif', serif;
+		line-height: 2rem;
+		font-size: 1.25rem;
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+	}
+
+	#sync-status {
+		position: fixed;
+		bottom: 6px;
+		right: 1rem;
+		font-size: 14px;
+		line-height: 20px;
+		color: #B8C2CC;
+		display: none;
+	}
+
+	#sync-status #sync-badge {
+		display: inline-block;
+	    border-radius: 20px;
+	    background: rgba(81, 216, 138, 0.35);
+	    height: 8px;
+	    width: 8px;
+	    color: #fff;
+	    text-align: center;
+	    line-height: 12px;
+	    font-size: 11px;
+	    margin-right: 8px;
+	}
+
+	#sync-status a {
+		color: #8795A1;
+		font-weight: 500;
+	}
+
+	#settings-corner {
+		position: fixed;
+		bottom: 6px;
+		left: 1rem;
+		font-size: 14px;
+		line-height: 20px;
+		color: #8795A1;
+	}
+
+	#settings-corner a {
+		color: #8795A1;
+	}
+
+	#settings-corner b{
+		font-weight: 500;
+	}
+
+	a#highlight-info-link {
+		max-width: 70%;
+		margin-left: auto;
+		overflow-x: hidden;
+	}
+
+	a {
+		color: #8795A1;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
+
+	#go-to-dailyreview {
+		position: fixed;
+		top: 6px;
+		right: 1rem;
+		font-size: 14px;
+	}
+
+	#go-to-dailyreview a {
+		color: #B8C2CC;
+	}
+
+</style>
+</head>
+
+<body>
+
+<section class="section">
+    <div class="container">
+    	<div class="columns">
+	    	<div class="column is-8 is-offset-2 highlight-block">
+	    		<div id="highlight-body">
+		    		<p class="highlight-text"></p>
+					<a id="highlight-info-link" style="display: block; color: #AEAFB0;" class="has-text-right" href="https://readwise.io/review_more"><span class="highlight-title"></span> <span class="highlight-author"></span></a>
+				</div>
+
+				<div id="settings" style="display: none">
+					<h1 style="font-weight: bold; margin-bottom: 2rem;">Readwise New Tab Settings</h1>
+					<div class="field">
+					  <div class="control">
+					    <label class="checkbox">
+					      <input type="checkbox">
+					      Never show Readwise on my new tab screen
+					    </label>
+					  </div>
+					</div>
+					<br>
+					<div class="control">
+					  <button id="save-settings" class="button is-primary">Save settings</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div id="go-to-dailyreview"><a href="https://readwise.io/dailyreview">Your Daily Readwise ⟶</a></div>
+
+<div id="sync-status"><span id="sync-badge"></span> <span id="sync-status-text">Last synced <span id="sync-num-hours"></span> hours ago</span></div>
+
+<div id="settings-corner"><b>Readwise</b> - <a id="open-settings" href="#">Settings</a> - <a id="go-to-default" href="chrome-search://local-ntp/local-ntp.html?dev=false">Default newtab ⟶</a></div>
+
+</body>
+</html>

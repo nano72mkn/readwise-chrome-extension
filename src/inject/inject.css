@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+
+.readwise-loading {
+	position: fixed;
+	top: 43px;
+    width: 720px;
+    text-align: center;
+    left: 50%;
+    margin-left: -360px;
+}
+
+.readwise-loading .loading-black-box {
+    display: inline-block;
+    background-color: black;
+    background-color: rgba(1,1,1, 0.8);
+    padding: 10px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+.readwise-loading .loader-text {
+	color: white;
+	font-size: 20px;
+	font-family: "Bookerly", Georgia, serif;
+	display: inline-block;
+}
+
+
+.readwise-loading .loader {
+    border: 2px solid #f3f3f3;
+    -webkit-animation: spin 0.45s linear infinite;
+    animation: spin 0.45s linear infinite;
+    border-top: 2px solid lightskyblue;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display:inline-block;
+    position: relative;
+    top: 4px;
+    margin-right: 10px;
+}
+
+.current-book {
+    color: antiquewhite;
+    font-style: italic;
+    font-size: 18px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.readwise-loading a {
+    display: block;
+    margin-top: 4px;
+    padding: 16px;
+    padding-left: 0;
+    float: right;
+    color: #72c7e3 !important;
+}

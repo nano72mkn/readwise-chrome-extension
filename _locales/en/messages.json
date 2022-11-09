@@ -1,0 +1,66 @@
+{
+   "l10nButton": {
+      "message": "in a \u003Cstrong>button\u003C/strong>"
+   },
+   "l10nButtonsAfter": {
+      "message": "Awesome, no?"
+   },
+   "l10nButtonsBefore": {
+      "message": "Different types of buttons are handled as well.  &lt;button&gt; elements have their html set:"
+   },
+   "l10nButtonsBetween": {
+      "message": "while &lt;input type='submit'&gt; and &lt;input type='button'&gt; get their 'value' set (note: no HTML):"
+   },
+   "l10nExtras": {
+      "description": "inform about places which may not be obvious, like \u003Ctitle>, etc",
+      "message": "You can even set \u003Cspan class='code'>data-l10n\u003C/span> on things like the &lt;title&gt; tag, which lets you have translatable page titles, or fieldset &lt;legend&gt; tags, or anywhere else - the default \u003Cspan class='code'>Boil.localize()\u003C/span> behavior will check every tag in the document, not just the body."
+   },
+   "l10nFirstParagraph": {
+      "description": "inform that \u003Cel data-l10n='' /> elements will be localized on load",
+      "message": "When the options page loads, elements decorated with \u003Cstrong>data-l10n\u003C/strong> will automatically be localized!"
+   },
+   "l10nHeader": {
+      "description": "Header text for the localization section",
+      "message": "It does localization too! (this whole tab is, actually)"
+   },
+   "l10nIntro": {
+      "description": "introduce the basic idea.",
+      "message": "'L10n' refers to 'Localization' - 'L' an 'n' are obvious, and 10 comes from the number of letters between those two.  It is the process/whatever of displaying something in the language of choice.  It uses 'I18n', 'Internationalization', which refers to the tools / framework supporting L10n.  I.e., something is internationalized if it has I18n support, and can be localized.  Something is localized for you if it is in your language / dialect."
+   },
+   "l10nProd": {
+      "description": "drive the point home.  It's good for you.",
+      "message": "You \u003Cstrong>are\u003C/strong> planning to allow localization, right?  You have \u003Cem>no idea\u003C/em> who will be using your extension!  You have no idea who will be translating it!  At least support the basics, it's not hard, and having the framework in place will let you transition much more easily later on."
+   },
+   "l10nSecondParagraph": {
+      "description": "introduce the data-l10n-args attribute.  End on a lame note.",
+      "message": "If you need more complex localization, you can also define \u003Cstrong>data-l10n-args\u003C/strong>.  This should contain \u003Cspan class='code'>$containerType$\u003C/span> filled with \u003Cspan class='code'>$dataType$\u003C/span>, which will be passed into Chrome's i18n API as \u003Cspan class='code'>$functionArgs$\u003C/span>.  In fact, this paragraph does just that, and wraps the args in mono-space font.  Easy!",
+      "placeholders": {
+         "containerType": {
+            "content": "$1",
+            "description": "type of the args container",
+            "example": "'array', 'list', or something similar"
+         },
+         "dataType": {
+            "content": "$2",
+            "description": "type of data in each array index",
+            "example": "string"
+         },
+         "functionArgs": {
+            "content": "$3",
+            "description": "whatever you call what you pass into a function/method.  args, params, etc.",
+            "example": "arguments"
+         }
+      }
+   },
+   "l10nSubmit": {
+      "message": "a \u003Cstrong>submit\u003C/strong> value"
+   },
+   "l10nTabName": {
+      "description": "name of the localization tab",
+      "message": "Localization"
+   },
+   "l10nThirdParagraph": {
+      "description": "inform that we handle placeholders, buttons, and direct HTML input",
+      "message": "Message contents are passed right into innerHTML without processing - include any tags (or even scripts) that you feel like.  If you have an input field, the placeholder will be set instead, and buttons will have the value attribute set."
+   }
+}

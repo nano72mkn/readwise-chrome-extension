@@ -300,7 +300,7 @@ function onDonePullingBook() {
 function pullBookPages(pageToken, contentLimitState, isRetry) {
   var isFirstRequest = !pageToken && !contentLimitState;
   // TODO: use current bookid instead of hardcoding
-  var url = 'https://read.amazon.com/notebook?asin=' + window.currentBookId;
+  var url = 'https://read.amazon.co.jp/notebook?asin=' + window.currentBookId;
   if (isFirstRequest) {
     // set the url to its regular state if we are on the first page
     url += '&contentLimitState=&';
@@ -384,7 +384,7 @@ function newPullRemainingBookIds() {
     return fetch(url, {
       "headers": $.extend({}, commonHeaders, extraHeaders),
       "credentials": "include",
-      "referrer": "https://read.amazon.com/",
+      "referrer": "https://read.amazon.co.jp/",
       "referrerPolicy": "no-referrer-when-downgrade",
       "body": null,
       "method": "GET",
@@ -395,17 +395,17 @@ function newPullRemainingBookIds() {
   }
 
   cloudReaderFetch(
-      "https://read.amazon.com/service/web/register/getDeviceToken?serialNumber=A2CTZ977SKFQZY&deviceType=A2CTZ977SKFQZY",
+      "https://read.amazon.co.jp/service/web/register/getDeviceToken?serialNumber=A2CTZ977SKFQZY&deviceType=A2CTZ977SKFQZY",
       {"x-amzn-sessionid": parseCookieString(window.azCookie, "session-id")}
   ).then(function (resp1) {
 
     cloudReaderFetch(
-        "https://read.amazon.com/service/web/reader/getPFM",
+        "https://read.amazon.co.jp/service/web/reader/getPFM",
         {"x-adp-session-token": resp1["deviceSessionToken"],}
     ).then(function (resp2) {
 
       cloudReaderFetch(
-          "https://read.amazon.com/service/web/reader/getOwnedContent?reason=Registration",
+          "https://read.amazon.co.jp/service/web/reader/getOwnedContent?reason=Registration",
           {"x-adp-session-token": resp1["deviceSessionToken"],}
       ).then(function (data) {
 
@@ -434,7 +434,7 @@ function pullRemainingBookIds(bookIdsToken) {
     return;
   }
 
-  getRequest('https://read.amazon.com/notebook?library=list&token=' + bookIdsToken).then(function (html) {
+  getRequest('https://read.amazon.co.jp/notebook?library=list&token=' + bookIdsToken).then(function (html) {
     var el = document.createElement('html');
     el.innerHTML = DOMPurify.sanitize(html);
 
@@ -503,7 +503,7 @@ function startSync() {
 
   var syncWindow = 25 * 60 * 60 * 1000  // 25 hours
 
-  getRequest('https://read.amazon.com/notebook').then(function (html) {
+  getRequest('https://read.amazon.co.jp/notebook').then(function (html) {
     var el = document.createElement('html');
     el.innerHTML = DOMPurify.sanitize(html);
 

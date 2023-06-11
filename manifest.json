@@ -10,11 +10,11 @@
    "content_scripts": [ {
       "all_frames": true,
       "css": [ "src/inject/inject.css" ],
-      "matches": [ "*://read.amazon.com/*", "*://*.readwise.io/*" ]
+      "matches": [ "*://read.amazon.co.jp/*", "*://*.readwise.io/*" ]
    }, {
       "all_frames": true,
       "js": [ "js/jquery/jquery.min.js", "js/js-cookie.js", "js/rollbar.js", "src/inject/inject.js" ],
-      "matches": [ "*://read.amazon.com/*", "*://*.readwise.io/*" ]
+      "matches": [ "*://read.amazon.co.jp/*", "*://*.readwise.io/*" ]
    } ],
    "content_security_policy": "script-src 'self'",
    "default_locale": "en",
@@ -28,7 +28,7 @@
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2RZ28nciWp9tktLC6lIlpbzYNElYRcIXN0EAssq8Wb4exUarYuaIUFz02daFiA5m015Fr7Ewu5NmASgBjepPM05MExy2mVz8BeXdNpGiHcgUnjimGcLTCieBLpwi40z+6rG1PI/juvxGoRxdNqZ3gjx1p2ffzH5UaMxKyYW826n/uPZK25ErDpCnxuHC3TWww1oaMBg9xgKWVEAnYzgXMAjMKVIr2bO6Wd3sDFTayUcwo1PCCwl8TeYzodn9l5zQo6WUguEhbIM6DjU+gtRawoQ49JMLiXiWwNq0DAqev1Jf+CIKEsEJW2fnJsjrX91nLjCml5Njvwh724K8lZuemQIDAQAB",
    "manifest_version": 2,
    "name": "Readwise",
-   "permissions": [ "notifications", "cookies", "storage", "alarms", "contextMenus", "*://read.amazon.com/*", "*://*.readwise.io/*" ],
+   "permissions": [ "notifications", "cookies", "storage", "alarms", "contextMenus", "*://read.amazon.co.jp/*", "*://*.readwise.io/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.8.2",
    "web_accessible_resources": [ "src/inject/newLoadAllQuotes.js", "js/rollbar.js" ]

@@ -5,7 +5,7 @@
    },
    "browser_action": {
       "default_icon": "icons/icon19.png",
-      "default_title": "Readwise"
+      "default_title": "Readwise For amazon.co.jp",
    },
    "content_scripts": [ {
       "all_frames": true,
@@ -27,7 +27,7 @@
    },
    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2RZ28nciWp9tktLC6lIlpbzYNElYRcIXN0EAssq8Wb4exUarYuaIUFz02daFiA5m015Fr7Ewu5NmASgBjepPM05MExy2mVz8BeXdNpGiHcgUnjimGcLTCieBLpwi40z+6rG1PI/juvxGoRxdNqZ3gjx1p2ffzH5UaMxKyYW826n/uPZK25ErDpCnxuHC3TWww1oaMBg9xgKWVEAnYzgXMAjMKVIr2bO6Wd3sDFTayUcwo1PCCwl8TeYzodn9l5zQo6WUguEhbIM6DjU+gtRawoQ49JMLiXiWwNq0DAqev1Jf+CIKEsEJW2fnJsjrX91nLjCml5Njvwh724K8lZuemQIDAQAB",
    "manifest_version": 2,
-   "name": "Readwise",
+   "name": "Readwise_for_amazon.co.jp",
    "permissions": [ "notifications", "cookies", "storage", "alarms", "contextMenus", "*://read.amazon.co.jp/*", "*://*.readwise.io/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.8.2",

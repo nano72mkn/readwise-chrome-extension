@@ -5,7 +5,7 @@
    },
    "browser_action": {
       "default_icon": "icons/icon19.png",
-      "default_title": "Readwise For amazon.co.jp",
+      "default_title": "Readwise For amazon.co.jp"
    },
    "content_scripts": [ {
       "all_frames": true,
